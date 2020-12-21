@@ -1,0 +1,13 @@
+a=1;b=10;
+Exp=(b+a)/2;
+num=10000;
+dist=[];
+for i=1:num
+    sum=0;
+    for j=1:i
+        v=rand;
+        sum=sum+v*(b-a)+a;
+    end
+    dist(j)=abs(Exp-sum/j);
+end
+plot(dist)
